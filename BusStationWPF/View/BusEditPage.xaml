@@ -19,7 +19,7 @@
         <localModelcol:TypeOfLevelModelCollection x:Key="CollectionForComboBox"/>
         <localModel:LevelModelCollection x:Key="CollectionForLevels"/>
         <localModelcol:TimesForStationModelCollection x:Key="CollectionForAddingDateTimeDepartureInBus"/>
-        <localModelcol:StationCollection x:Key="CollectionForStatioinComboBox"/>
+        <localModelcol:StationCollection x:Key="CollectionForStationinComboBox"/>
         <localModelcol:ScheduleStationBusCollection x:Key="CollectionForAddingStationInBus"/>
     </Page.Resources>
     <Grid>
@@ -39,7 +39,7 @@
                         <DataTemplate x:Key="LabelRowTemplate" DataType="{x:Type localModel:CellStructureLevelModel}">
                             <StackPanel Margin="10">
                                 <TextBlock Text="{Binding CostPerStation}"/>
-                                <TextBlock Text="{Binding NumberOfSeatInVan}"/>
+                                <TextBlock Text="{Binding NumberOfSeatInBus}"/>
                             </StackPanel>
                         </DataTemplate>
 
@@ -49,12 +49,12 @@
                             </StackPanel>
                         </DataTemplate>
 
-                        <DataTemplate x:Key="TemplateForStructureVans">
+                        <DataTemplate x:Key="TemplateForStructureLevels">
                             <StackPanel>
-                                <TextBlock Text="{Binding NumberInTrain}" />
+                                <TextBlock Text="{Binding NumberInBus}" />
                                 <ComboBox
-                                    SelectedValue="{Binding TypeOfVanId}"
-                                    ItemsSource="{Binding Source={StaticResource CollectionForComboBox}, Path=TypeOfVanModels}"
+                                    SelectedValue="{Binding TypeOfLevelId}"
+                                    ItemsSource="{Binding Source={StaticResource CollectionForComboBox}, Path=TypeOfLevelModels}"
                                     DisplayMemberPath="Name"
                                     SelectedValuePath="Id"
                                     
@@ -63,8 +63,8 @@
   materialDesign:HintAssist.HintOpacity=".26"/>
 
                                 <Button
-                                    Command="{Binding ElementName=Page, Path=DataContext.EditorTrain.RemoveVan}"
-    Content="Удалить вагон"
+                                    Command="{Binding ElementName=Page, Path=DataContext.EditorBus.RemoveLevel}"
+    Content="Удалить уровень"
                                     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
 
@@ -102,8 +102,8 @@
                                     </ItemsControl.ItemsPanel>
                                 </ItemsControl>
                                 <Button
-            Command="{Binding Path=EditorTrain.AddVan}"
-    Content="Добавить вагон"
+            Command="{Binding Path=EditorBus.AddLevel}"
+    Content="Добавить уровень"
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                                 </Button>
                             </StackPanel>
@@ -144,10 +144,10 @@
                                 <StackPanel.Resources>
                                     <DataTemplate x:Key="TemplateForStationSchedule">
                                         <StackPanel>
-                                            <TextBlock Text="{Binding Path=StationTrainSchedule.NumberInTrip}" />
+                                            <TextBlock Text="{Binding Path=StationBusSchedule.Number_flight}" />
                                             <ComboBox
-                                    SelectedValue="{Binding Path=StationTrainScheduleModel.IdStation}"
-                                    ItemsSource="{Binding Source={StaticResource CollectionForStatioinComboBox}, Path=Stations}"
+                                    SelectedValue="{Binding Path=StationBusScheduleModel.IdStation}"
+                                    ItemsSource="{Binding Source={StaticResource CollectionForStationinComboBox}, Path=Stations}"
                                     DisplayMemberPath="Name"
                                     SelectedValuePath="Id"
                                     
@@ -253,7 +253,7 @@
                                                 </materialDesign:DialogHost>
                                             </StackPanel>
                                             <Button
-                                    Command="{Binding ElementName=Page, Path=DataContext.EditorTrain.RemoveStationFromSchedule}"
+                                    Command="{Binding ElementName=Page, Path=DataContext.EditorBus.RemoveStationFromSchedule}"
     Content="Удалить станцию"
                                     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
@@ -262,7 +262,7 @@
                                     </DataTemplate>
                                 </StackPanel.Resources>
                                 <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForStationSchedule}"
-               ItemsSource="{Binding Source={StaticResource CollectionForAddingStationInTrain}, Path=StationSchedule}">
+               ItemsSource="{Binding Source={StaticResource CollectionForAddingStationInBus}, Path=StationSchedule}">
                                     <!--<ItemsControl.Template>
                                     <ControlTemplate>
                                         <ScrollViewer>
@@ -278,7 +278,7 @@
                                     </ItemsControl.ItemsPanel>
                                 </ItemsControl>
                                 <Button
-            Command="{Binding Path=EditorTrain.AddStationInSchedule}"
+            Command="{Binding Path=EditorBus.AddStationInSchedule}"
     Content="Добавить станцию в расписание"
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                                 </Button>
@@ -338,7 +338,7 @@
                                                 </materialDesign:DialogHost>
                                             </StackPanel>
                                             <Button
-                                    Command="{Binding ElementName=Page, Path=DataContext.EditorTrain.RemoveStartTripDateTime}"
+                                    Command="{Binding ElementName=Page, Path=DataContext.EditorBus.RemoveStartTripDateTime}"
     Content="Удалить время отправления"
                                     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
@@ -347,7 +347,7 @@
                                     </DataTemplate>
                                 </StackPanel.Resources>
                                 <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForDateTimesStartTrip}"
-               ItemsSource="{Binding Source={StaticResource CollectionForAddingDateTimeDepartureInTrain}, Path=Collection}">
+               ItemsSource="{Binding Source={StaticResource CollectionForAddingDateTimeDepartureInBus}, Path=Collection}">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <StackPanel Orientation="Vertical"  ScrollViewer.IsDeferredScrollingEnabled="True"/>
@@ -355,8 +355,8 @@
                                     </ItemsControl.ItemsPanel>
                                 </ItemsControl>
                                 <Button
-            Command="{Binding Path=EditorTrain.AddStartTripDateTime}"
-    Content="Добавить время отправления поезда"
+            Command="{Binding Path=EditorBus.AddStartTripDateTime}"
+    Content="Добавить время отправления автобуса"
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                                 </Button>
                             </StackPanel>
@@ -365,7 +365,7 @@
                 </TabItem>
                 <TabItem IsEnabled="True">
                     <TabItem.Header>
-                        <Button Command="{Binding Path=EditorTrain.AddTrain}" Cursor="Hand">
+                        <Button Command="{Binding Path=EditorBus.AddBus}" Cursor="Hand">
                             <StackPanel
           Width="auto"
           Height="auto">

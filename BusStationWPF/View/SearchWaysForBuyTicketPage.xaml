@@ -125,7 +125,7 @@
           Width="32"
           Height="32"
           VerticalAlignment="Center"
-          Kind="Train" />
+          Kind="Bus" />
                                 </DataTemplate>
 
 

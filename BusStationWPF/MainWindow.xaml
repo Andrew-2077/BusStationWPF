@@ -105,11 +105,11 @@
                     Margin="10"
     Height="{StaticResource ButtonHeight}"
     materialDesign:ButtonAssist.CornerRadius="10"
-    Visibility="{Binding Path =MainMenuControllerService.VisibleButtons.VisibleCreateTrain}"
+    Visibility="{Binding Path =MainMenuControllerService.VisibleButtons.VisibleCreateBus}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners"
                     Content="Создать поезд"
-                    Command="{Binding Path=EditorTrainService.StartProcess}">
+                    Command="{Binding Path=EditorBusService.StartProcess}">
                 </Button>
                 <Button
                     

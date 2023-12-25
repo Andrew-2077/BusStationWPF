@@ -42,7 +42,7 @@
                             Margin="2 0 2 0"
                             FontSize="20"
                             Background="{Binding typeOccupied, Converter={StaticResource ConverterForColorSeat}}"
-                            Text="{Binding NumberOfSeatInVan}"/>
+                            Text="{Binding NumberOfSeatInLevel}"/>
                     </StackPanel>
                 </DataTemplate>
 
@@ -54,12 +54,12 @@
 
                 </DataTemplate>
 
-                <DataTemplate x:Key="TemplateForStructureVans">
+                <DataTemplate x:Key="TemplateForStructureLevels">
                     <StackPanel>
-                        <TextBlock Text="{Binding NumberInTrain}" />
+                        <TextBlock Text="{Binding NumberInBus}" />
                         <ComboBox
        SelectedValue="{Binding TypeOfLevelId}"
-       ItemsSource="{Binding ElementName=Page, Path=DataContext.EditorTrainService.ProcesserTrain.InfoForView.TypeOfvanModels}"
+       ItemsSource="{Binding ElementName=Page, Path=DataContext.EditorBusService.ProcessBus.InfoForView.TypeOflevelModels}"
        DisplayMemberPath="Name"
        SelectedValuePath="Id"
                                     
@@ -68,7 +68,7 @@
   materialDesign:HintAssist.HintOpacity=".26"/>
 
                         <Button
-                                    Command="{Binding ElementName=Page, Path=DataContext.EditorTrainService.ProcesserTrain.UndoProcess}"
+                                    Command="{Binding ElementName=Page, Path=DataContext.EditorBusService.ProcessBus.UndoProcess}"
     Content="Удалить вагон"
                                     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
@@ -78,8 +78,8 @@
             </Grid.Resources>
             <ScrollViewer Grid.Column="0" Margin="10">
                 <StackPanel>
-                    <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForStructureVans}"
-     ItemsSource="{Binding Path=EditorTrainService.ProcesserTrain.InfoForView.VanModels}"         >
+                    <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForStructureLevels}"
+     ItemsSource="{Binding Path=EditorBusService.ProcessBus.InfoForView.LevelModels}">
 
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -88,7 +88,7 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                     <Button
-            Command="{Binding Path=EditorTrainService.ProcesserTrain.DoProcess}"
+            Command="{Binding Path=EditorBusService.ProcessBus.DoProcess}"
     Content="Добавить вагон"
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                     </Button>
@@ -107,7 +107,7 @@
             </ScrollViewer>
         </Grid>
         <Button Grid.Row="1"
- Command="{Binding Path=EditorTrainService.GoBack}"
+ Command="{Binding Path=EditorBusService.GoBack}"
   Style="{StaticResource MaterialDesignFloatingActionLightButton}"
   ToolTip="Назад" HorizontalAlignment="Left" Margin="10">
             <materialDesign:PackIcon
@@ -116,7 +116,7 @@
     Kind="ArrowLeft" />
         </Button>
         <Button Grid.Row="1"
- Command="{Binding Path=EditorTrainService.ProcesserTrain.СompleteProcess}"
+ Command="{Binding Path=EditorBusService.ProcessBus.СompleteProcess}"
   Style="{StaticResource MaterialDesignFloatingActionLightButton}"
   ToolTip="Назад" HorizontalAlignment="Right" Margin="10">
             <materialDesign:PackIcon

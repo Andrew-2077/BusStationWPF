@@ -19,7 +19,7 @@
     <!--d:DataContext = "{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">-->
 
     <Page.Resources>
-        <localModecol:BusInProfileModelCollection x:Key="Trains"/>
+        <localModecol:BusInProfileModelCollection x:Key="Buses"/>
         <localModel:PassengerProfileCollection x:Key="Passengers"/>
         <Style x:Key="HorizontalDividerBorder" TargetType="{x:Type Border}">
             <Setter Property="Background" Value="{DynamicResource MaterialDesignDivider}" />
@@ -384,13 +384,13 @@
       Style="{StaticResource HorizontalDividerBorder}" />
                         <Expander MaxWidth="600"
       
-      Header="Поезда">
+      Header="Автобусы">
                             <StackPanel
         Margin="24,8,24,16"
         Orientation="Vertical"
         TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
                                 <ItemsControl 
-               ItemsSource="{Binding Path=InfoProfileService.TrainInProfileModels}">
+               ItemsSource="{Binding Path=InfoProfileService.BusInProfileModels}">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <StackPanel Orientation="Vertical"  ScrollViewer.IsDeferredScrollingEnabled="True"/>
@@ -411,7 +411,7 @@
           Width="32"
           Height="32"
           VerticalAlignment="Center"
-          Kind="Train" />
+          Kind="Bus" />
 
                                                         </StackPanel>
 
@@ -446,7 +446,7 @@
                                                             Width="auto"
                                                         Grid.Row="1"
     Command="{Binding ElementName=ProfilePage, Path=DataContext.InfoProfileService.RemoveBus}"
-    Content="Удалить поезд"
+    Content="Удалить автобус"
                                                             HorizontalAlignment="Left"
     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
@@ -455,7 +455,7 @@
                                                             HorizontalAlignment="Right"
                                                         Grid.Row="1"
     Command="{Binding ElementName=ProfilePage, Path=DataContext.InfoProfileService.EditBus}"
-    Content="Редактировать поезд"
+    Content="Редактировать автобус"
     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
                                                 </Grid>

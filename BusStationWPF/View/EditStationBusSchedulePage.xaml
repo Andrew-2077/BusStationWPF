@@ -29,10 +29,10 @@
                 <StackPanel.Resources>
                     <DataTemplate x:Key="TemplateForStationSchedule" DataType="{x:Type localModel:ModelForEditingSchedule}">
                         <StackPanel Margin="10">
-                            <TextBlock Text="{Binding Path=StationTrainScheduleModel.NumberInTrip}" />
+                            <TextBlock Text="{Binding Path=StationBusScheduleModel.Number_flight}" />
                             <ComboBox
-                                ItemsSource="{Binding ElementName=Page, Path=DataContext.EditorTrainService.ProcesserTrain.InfoForView.StationModels}"
-                                    SelectedValue="{Binding Path=StationTrainScheduleModel.IdStation}"
+                                ItemsSource="{Binding ElementName=Page, Path=DataContext.EditorBusService.ProcessBus.InfoForView.StationModels}"
+                                    SelectedValue="{Binding Path=StationBusScheduleModel.IdStation}"
 
                                     DisplayMemberPath="Name"
                                     SelectedValuePath="Id"
@@ -139,7 +139,7 @@
                                 </materialDesign:DialogHost>
                             </StackPanel>
                             <Button
-                                    Command="{Binding ElementName=Page, Path=DataContext.EditorTrainService.ProcesserTrain.UndoProcess}"
+                                    Command="{Binding ElementName=Page, Path=DataContext.EditorBusService.ProcessBus.UndoProcess}"
     Content="Удалить станцию"
                                     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
@@ -148,9 +148,9 @@
                     </DataTemplate>
                 </StackPanel.Resources>
                 <ItemsControl
-                    MaxWidth="600" 
+                    MaxWidth="600"
                     ItemTemplate="{StaticResource ResourceKey=TemplateForStationSchedule}"
-               ItemsSource="{Binding Path=EditorTrainService.ProcesserTrain.InfoForView.collection }">
+               ItemsSource="{Binding Path=EditorBusService.ProcessBus.InfoForView.collection }">
                     <ItemsControl.ItemsPanel>
 
                         <ItemsPanelTemplate>
@@ -161,13 +161,13 @@
                 <Button
                     Margin="10"
                     MaxWidth="600"
-            Command="{Binding Path=EditorTrainService.ProcesserTrain.DoProcess}"
+            Command="{Binding Path=EditorBusService.ProcessBus.DoProcess}"
     Content="Добавить станцию в расписание"
     Style="{StaticResource MaterialDesignRaisedLightButton}" Cursor="Hand"/>
             </StackPanel>
         </ScrollViewer>
         <Button Grid.Row="1"
- Command="{Binding Path=EditorTrainService.GoBack}"
+ Command="{Binding Path=EditorBusService.GoBack}"
   Style="{StaticResource MaterialDesignFloatingActionLightButton}"
   ToolTip="Назад" HorizontalAlignment="Left" Margin="10">
             <materialDesign:PackIcon
@@ -176,7 +176,7 @@
     Kind="ArrowLeft" />
         </Button>
         <Button Grid.Row="1"
- Command="{Binding Path=EditorTrainService.ProcesserTrain.СompleteProcess}"
+ Command="{Binding Path=EditorBusService.ProcessBus.СompleteProcess}"
   Style="{StaticResource MaterialDesignFloatingActionLightButton}"
   ToolTip="Назад" HorizontalAlignment="Right" Margin="10">
             <materialDesign:PackIcon

@@ -83,7 +83,7 @@
                             </StackPanel>
                             <Button
                                            Margin="10"
-                                    Command="{Binding ElementName=Page, Path=DataContext.EditorTrainService.ProcesserTrain.UndoProcess}"
+                                    Command="{Binding ElementName=Page, Path=DataContext.EditorBusService.ProcessBus.UndoProcess}"
     Content="Удалить время отправления"
                                     CommandParameter="{Binding}"
     Style="{StaticResource MaterialDesignRaisedLightButton}"/>
@@ -93,7 +93,7 @@
                 </StackPanel.Resources>
                 <ItemsControl
                     MaxWidth="600" ItemTemplate="{StaticResource ResourceKey=TemplateForDateTimesStartTrip}"
-               ItemsSource="{Binding Path=EditorTrainService.ProcesserTrain.InfoForView.timesForStationModels }">
+               ItemsSource="{Binding Path=EditorBusService.ProcessBus.InfoForView.timesForStationModels }">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Vertical"  ScrollViewer.IsDeferredScrollingEnabled="True"/>
@@ -103,14 +103,14 @@
                 <Button
                     Margin="10"
                     MaxWidth="600"
-            Command="{Binding Path=EditorTrainService.ProcesserTrain.DoProcess}"
-    Content="Добавить время отправления поезда"
+            Command="{Binding Path=EditorBusService.ProcessBus.DoProcess}"
+    Content="Добавить время отправления автобуса"
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                 </Button>
             </StackPanel>
         </ScrollViewer>
         <Button Grid.Row="1"
- Command="{Binding Path=EditorTrainService.GoBack}"
+ Command="{Binding Path=EditorBusService.GoBack}"
   Style="{StaticResource MaterialDesignFloatingActionLightButton}"
   ToolTip="Назад" HorizontalAlignment="Left" Margin="10">
             <materialDesign:PackIcon
@@ -119,7 +119,7 @@
     Kind="ArrowLeft" />
         </Button>
         <Button Grid.Row="1"
- Command="{Binding Path=EditorTrainService.ProcesserTrain.СompleteProcess}"
+ Command="{Binding Path=EditorBusService.ProcessBus.СompleteProcess}"
   Style="{StaticResource MaterialDesignFloatingActionLightButton}"
   ToolTip="Назад" HorizontalAlignment="Right" Margin="10">
             <materialDesign:PackIcon

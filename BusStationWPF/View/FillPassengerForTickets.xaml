@@ -127,7 +127,7 @@
                                             Grid.Row ="1"
     MaxWidth="400"
     VerticalAlignment="Top"
-    materialDesign:HintAssist.Hint="Пасспорт"
+    materialDesign:HintAssist.Hint="Паспорт"
     AcceptsReturn="True"
    
     Style="{StaticResource MaterialDesignFilledTextBox}"
