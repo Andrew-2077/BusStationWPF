@@ -335,7 +335,15 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="View\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PrivateDataProfie.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PrivateDataProfile.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
