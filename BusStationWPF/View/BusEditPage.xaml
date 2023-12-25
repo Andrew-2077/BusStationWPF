@@ -17,10 +17,10 @@
 
     <Page.Resources>
         <localModelcol:TypeOfLevelModelCollection x:Key="CollectionForComboBox"/>
-        <localModel:LevelModelCollection x:Key="CollectionForVans"/>
-        <localModelcol:TimesForStationModelCollection x:Key="CollectionForAddingDateTimeDepartureInTrain"/>
+        <localModel:LevelModelCollection x:Key="CollectionForLevels"/>
+        <localModelcol:TimesForStationModelCollection x:Key="CollectionForAddingDateTimeDepartureInBus"/>
         <localModelcol:StationCollection x:Key="CollectionForStatioinComboBox"/>
-        <localModelcol:ScheduleStationBusCollection x:Key="CollectionForAddingStationInTrain"/>
+        <localModelcol:ScheduleStationBusCollection x:Key="CollectionForAddingStationInBus"/>
     </Page.Resources>
     <Grid>
         <materialDesign:Card>
