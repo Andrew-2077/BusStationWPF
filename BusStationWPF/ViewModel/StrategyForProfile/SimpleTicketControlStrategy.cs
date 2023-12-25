@@ -35,9 +35,9 @@ namespace BusStationWPF.ViewModel.StrategyForProfile
             PassengerViewModel passengerForTicket = new PassengerViewModel(db.Passengers.GetItem(ticket.IdPassenger), true);
             TimesForStation startTimesForStation = db.TimesForStation.GetItem(ticket.IdTimesForStationSource);
             TimesForStation endTimesForStation = db.TimesForStation.GetItem(ticket.IdTimesForStationDestiny);
-            ScheduleStationBus startStationBusSchedule = db.ScheduleStationBus.GetList().Where(i => i.Number_flight ==
+            StationBusSchedule startStationBusSchedule = db.ScheduleStationBus.GetList().Where(i => i.Number_flight ==
             db.TimesForStation.GetList().Where(j => j.RouteId == startTimesForStation.RouteId && j.DepartureTime < startTimesForStation.ArrivalTime).Count() + 1).First();
-            ScheduleStationBus endStationBusSchedule = db.ScheduleStationBus.GetList().Where(i => i.Number_flight ==
+            StationBusSchedule endStationBusSchedule = db.ScheduleStationBus.GetList().Where(i => i.Number_flight ==
             db.TimesForStation.GetList().Where(j => j.RouteId == endTimesForStation.RouteId && j.DepartureTime < endTimesForStation.ArrivalTime).Count() + 1).First();
             Station startStation = db.Station.GetList().Where(i => i.Id == startStationBusSchedule.IdStation).First();
             Station endStation = db.Station.GetList().Where(i => i.Id == endStationBusSchedule.IdStation).First();

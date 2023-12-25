@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
-    public interface IRepositoryScheduleStationBus : IRepository<ScheduleStationBus>
+    public interface IRepositoryScheduleStationBus : IRepository<StationBusSchedule>
     {
-        ScheduleStationBus GetItem(int id);
+        StationBusSchedule GetItem(int id);
         void Delete(int id);
     }
 }

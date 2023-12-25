@@ -70,8 +70,8 @@ namespace BusStationWPF.ViewModel.StrategiesSearchWay
         }
         protected class BusWayWithoutTime
         {
-            public ScheduleStationBus FromStationSchedule { get; set; }
-            public ScheduleStationBus ToStationSchedule { get; set; }
+            public StationBusSchedule FromStationSchedule { get; set; }
+            public StationBusSchedule ToStationSchedule { get; set; }
         }
         protected void CheckPathesForStationAndAddFinded(NodeForSearchWay nodeForSearchWay)
         {
@@ -90,7 +90,7 @@ namespace BusStationWPF.ViewModel.StrategiesSearchWay
                 CheckWayForFindEndOrNot(nodeForSearchWay, Way);
             });
         }
-        void CheckWayForFindEndOrNot(NodeForSearchWay nodeForSearchWay, IGrouping<int, ScheduleStationBus> Way)
+        void CheckWayForFindEndOrNot(NodeForSearchWay nodeForSearchWay, IGrouping<int, StationBusSchedule> Way)
         {
             if (Way.FirstOrDefault(i => i.IdStation == nodeForSearchWay.StationEnd.Id) != null)
             {
@@ -105,9 +105,9 @@ namespace BusStationWPF.ViewModel.StrategiesSearchWay
             else
                 AddWaysForSearching(nodeForSearchWay, Way);
         }
-        void AddWaysForSearching(NodeForSearchWay nodeForSearchWay, IGrouping<int, ScheduleStationBus> Way)
+        void AddWaysForSearching(NodeForSearchWay nodeForSearchWay, IGrouping<int, StationBusSchedule> Way)
         {
-            List<ScheduleStationBus> ways = Way.ToList();
+            List<StationBusSchedule> ways = Way.ToList();
             for (int i = 1; i < ways.Count; i++)
             {
                 List<BusWayWithoutTime> WayForAdd = new List<BusWayWithoutTime>(nodeForSearchWay.CurrentStationAndPathNode.CurrentPath);

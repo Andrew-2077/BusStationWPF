@@ -6,7 +6,7 @@ namespace DAL.Entitites
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class ScheduleStationBus
+    public partial class StationBusSchedule
     {
         public int Id { get; set; }
 

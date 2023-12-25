@@ -53,7 +53,7 @@ namespace BusStationWPF.Model
                 OnPropertyChanged("Number_flight");
             }
         }
-        public StationBusScheduleModel(ScheduleStationBus item)
+        public StationBusScheduleModel(StationBusSchedule item)
         {
             this.id = item.Id;
             this.idStation = item.IdStation;
@@ -61,7 +61,7 @@ namespace BusStationWPF.Model
             this.number_flight = item.Number_flight;
         }
         public StationBusScheduleModel() { }
-        public ScheduleStationBus GetStationBusSchedule() => new ScheduleStationBus() { Id = this.Id, IdBus = this.idBus, IdStation = this.idStation, Number_flight = this.number_flight };
+        public StationBusSchedule GetStationBusSchedule() => new StationBusSchedule() { Id = this.Id, IdBus = this.idBus, IdStation = this.idStation, Number_flight = this.number_flight };
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
     }

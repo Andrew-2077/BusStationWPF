@@ -14,7 +14,7 @@ namespace DAL.Entitites
         {
             Level = new HashSet<Level>();
             Route = new HashSet<Route>();
-            ScheduleStationBus = new HashSet<ScheduleStationBus>();
+            ScheduleStationBus = new HashSet<StationBusSchedule>();
         }
 
         public int Id { get; set; }
@@ -30,6 +30,6 @@ namespace DAL.Entitites
         public virtual ICollection<Route> Route { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ScheduleStationBus> ScheduleStationBus { get; set; }
+        public virtual ICollection<StationBusSchedule> ScheduleStationBus { get; set; }
     }
 }

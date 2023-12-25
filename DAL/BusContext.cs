@@ -16,7 +16,7 @@ namespace DAL.Entitites
         public virtual DbSet<Level> Level { get; set; }
         public virtual DbSet<Passenger> Passenger { get; set; }
         public virtual DbSet<Route> Route { get; set; }
-        public virtual DbSet<ScheduleStationBus> ScheduleStationBus { get; set; }
+        public virtual DbSet<StationBusSchedule> ScheduleStationBus { get; set; }
         public virtual DbSet<Seat> Seat { get; set; }
         public virtual DbSet<Station> Station { get; set; }
         public virtual DbSet<Ticket> Ticket { get; set; }

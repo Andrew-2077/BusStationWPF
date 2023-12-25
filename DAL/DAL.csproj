@@ -72,7 +72,7 @@
     <Compile Include="Entitites\Level.cs" />
     <Compile Include="Entitites\Passenger.cs" />
     <Compile Include="Entitites\Route.cs" />
-    <Compile Include="Entitites\ScheduleStationBus.cs" />
+    <Compile Include="Entitites\StationBusSchedule.cs" />
     <Compile Include="Entitites\Seat.cs" />
     <Compile Include="Entitites\Station.cs" />
     <Compile Include="Entitites\Ticket.cs" />

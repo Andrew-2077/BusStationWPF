@@ -17,7 +17,7 @@ using BusStationWPF.ViewModel.Tests;
 
 namespace BusStationWPF.Util
 {
-    internal class NinjectRegistrations : NinjectModule
+    public class NinjectRegistrations : NinjectModule
     {
         private readonly MainWindow window;
         public NinjectRegistrations(MainWindow window)

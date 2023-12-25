@@ -16,25 +16,25 @@ namespace DAL.Real.Repos
         {
             this.db = db;
         }
-        public List<ScheduleStationBus> GetList()
+        public List<StationBusSchedule> GetList()
         {
             return db.ScheduleStationBus.ToList();
         }
-        public ScheduleStationBus GetItem(int id)
+        public StationBusSchedule GetItem(int id)
         {
             return db.ScheduleStationBus.FirstOrDefault(i => i.Id == id);
         }
-        public void Create(ScheduleStationBus item)
+        public void Create(StationBusSchedule item)
         {
             db.ScheduleStationBus.Add(item);
         }
-        public void Update(ScheduleStationBus item)
+        public void Update(StationBusSchedule item)
         {
             db.Entry(item).State = EntityState.Modified;
         }
         public void Delete(int id)
         {
-            ScheduleStationBus stationBusSchedule = GetItem(id);
+            StationBusSchedule stationBusSchedule = GetItem(id);
             if (stationBusSchedule != null)
                 db.ScheduleStationBus.Remove(stationBusSchedule);
         }
