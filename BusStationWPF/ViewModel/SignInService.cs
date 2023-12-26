@@ -39,7 +39,7 @@ namespace BusStationWPF.ViewModel
                         if ((currentUser = unityOfWork.Users.GetItem(userForLoginWindow.Login)) != null && currentUser.Password == userForLoginWindow.Password)
                         {
                             dialogResult = false;
-                            UserSignIn?.Invoke(new UserModel(currentUser));
+                            UserSignIn.Invoke(new UserModel(currentUser));
                         }
                         else
                             MessageBox.Show("Логин или пароль неверный!");

@@ -22,7 +22,7 @@
         <localModelcol:StationCollection x:Key="CollectionForStationinComboBox"/>
         <localModelcol:ScheduleStationBusCollection x:Key="CollectionForAddingStationInBus"/>
     </Page.Resources>
-    <Grid>
+    <!--<Grid>
         <materialDesign:Card>
             <TabControl
     HorizontalContentAlignment="Center"
@@ -91,8 +91,7 @@
                             <ColumnDefinition Width="653*"/>
                         </Grid.ColumnDefinitions>
                         <ScrollViewer>
-                            <StackPanel IsEnabled="{Binding Source={x:Static localModelEditing:InfoButtonsOnBusEditPage},
-                            Path=IsEnable}">
+                            <StackPanel IsEnabled="{Binding Source={x:Static localModelEditing:InfoButtonsOnBusEditPage}, Path=IsEnable}">
                                 <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForStructureLevels}"
                ItemsSource="{Binding Source={StaticResource CollectionForLevels}, Path=LevelCollection}">
                                     <ItemsControl.ItemsPanel>
@@ -379,5 +378,5 @@
         </materialDesign:Card>
 
 
-    </Grid>
+    </Grid>-->
 </Page>

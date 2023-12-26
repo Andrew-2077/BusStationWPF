@@ -17,8 +17,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
         xmlns:materialDesignThemesWPF="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
-        Title="MainWindow" Height="450" Width="800">
-    <!--d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">-->
+        Title="MainWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

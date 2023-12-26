@@ -23,7 +23,7 @@ namespace BusStationWPF.ViewModel.Tests
             get => new RelayCommand((obj) =>
             {
                 User user = _unityOfWork.Users.GetItem("test");
-                UserSignIn?.Invoke(new UserModel(user) { TypeUser = BusStationWPF.Model.Enum.TypeUser.Admin });
+                UserSignIn.Invoke(new UserModel(user) { TypeUser = BusStationWPF.Model.Enum.TypeUser.Admin });
             });
         }
         public ICommand SignUp

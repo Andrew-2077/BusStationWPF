@@ -17,7 +17,7 @@
       xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
       Title="Page1" Background="White"
       Name="SearchPage"
-    d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
+      d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
         <localModelcol:StationModelCollection x:Key="Stations"/>

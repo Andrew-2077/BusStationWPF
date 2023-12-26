@@ -18,7 +18,7 @@
       Name="SearchPage"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SearchWaysForReportPage"
-    d:DataContext = "{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
+      d:DataContext = "{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
         <localModelcol:StationModelCollection x:Key="Stations"/>
