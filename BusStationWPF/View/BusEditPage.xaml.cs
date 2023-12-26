@@ -25,7 +25,7 @@ namespace BusStationWPF.View
         {
             InitializeComponent();
             var a = ViewModelObject.ShowerStructureLevel.StructureLevelWithoutSeats;
-            rad.ItemsSource = a;
+            //rad.ItemsSource = a;
             this.DataContext = ViewModelObject;
         }
     }

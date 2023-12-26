@@ -15,8 +15,8 @@
       mc:Ignorable="d" 
       Name="Page"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="EditStationBusSchedulePage">
-    <!--d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">-->
+      Title="EditStationBusSchedulePage"
+    d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Grid>
         <Grid.RowDefinitions>

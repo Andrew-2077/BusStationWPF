@@ -16,8 +16,8 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
       Title="Page1" Background="White"
-      Name="SearchPage">
-    <!--d:DataContext="{d:DesignInstance localViewModel:IviewModel, IsDesignTimeCreatable=False}">-->
+      Name="SearchPage"
+    d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
         <localModelcol:StationModelCollection x:Key="Stations"/>

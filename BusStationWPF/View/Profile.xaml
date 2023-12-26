@@ -15,8 +15,8 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
       Title="Page2" Background="White" d:Height="517" d:Width="900"
-      Name="ProfilePage">
-    <!--d:DataContext = "{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">-->
+      Name="ProfilePage"
+    d:DataContext = "{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
         <localModecol:BusInProfileModelCollection x:Key="Buses"/>

@@ -15,8 +15,8 @@
       xmlns:localViewModel="clr-namespace:BusStationWPF.ViewModel.Interfaces"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="FillPassengerForTickets">
-    <!--d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">-->
+      Title="FillPassengerForTickets"
+    d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
         <localModelcol:PassengerModelObservableCollection x:Key="LoadedPassengers"/>

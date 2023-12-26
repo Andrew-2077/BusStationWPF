@@ -22,7 +22,7 @@
         <localModelcol:StationCollection x:Key="CollectionForStationinComboBox"/>
         <localModelcol:ScheduleStationBusCollection x:Key="CollectionForAddingStationInBus"/>
     </Page.Resources>
-    <Grid>
+    <!--<Grid>
         <materialDesign:Card>
             <TabControl
     HorizontalContentAlignment="Center"
@@ -263,13 +263,13 @@
                                 </StackPanel.Resources>
                                 <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForStationSchedule}"
                ItemsSource="{Binding Source={StaticResource CollectionForAddingStationInBus}, Path=StationSchedule}">
-                                    <!--<ItemsControl.Template>
+                                    --><!--<ItemsControl.Template>
                                     <ControlTemplate>
                                         <ScrollViewer>
                                             <ItemsPresenter />
                                         </ScrollViewer>
                                     </ControlTemplate>
-                                </ItemsControl.Template>-->
+                                </ItemsControl.Template>--><!--
                                     <ItemsControl.ItemsPanel>
 
                                         <ItemsPanelTemplate>
@@ -386,5 +386,5 @@
         </materialDesign:Card>
 
 
-    </Grid>
+    </Grid>-->
 </Page>

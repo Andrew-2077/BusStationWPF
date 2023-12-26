@@ -15,8 +15,8 @@
       xmlns:system="clr-namespace:System;assembly=mscorlib"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
-      Title="ReportPage">
-    <!--d:DataContext="{d:DesignInstance localViewModel:IMediator, IsDesignTimeCreatable=False}">-->
+      Title="ReportPage"
+    d:DataContext="{d:DesignInstance localViewModel:IViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
         <localModel:FiltersForStrategyCompileReport x:Key="Filter"/>
