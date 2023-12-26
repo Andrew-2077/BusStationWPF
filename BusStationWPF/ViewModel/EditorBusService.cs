@@ -96,7 +96,7 @@ namespace BusStationWPF.ViewModel
                 where level.BusId == busModel.Id
                 orderby level.NumberInBus
                 select new LevelModel(level)).ToList().ForEach(i => levels.Add(i));
-            (from StationBusSchedule in db.ScheduleStationBus.GetList()
+            (from StationBusSchedule in db.StationBusSchedule.GetList()
              where StationBusSchedule.IdBus == busModel.Id
              orderby StationBusSchedule.Number_flight
              select new StationBusScheduleModel(StationBusSchedule)).ToList().ForEach(i =>
@@ -313,7 +313,7 @@ namespace BusStationWPF.ViewModel
                     levels.ToList().ForEach(level => BusForAdd.Level.Add(level.GetLevel()));
                     modelForEditingScheduleCollection.ToList().ForEach(modelForEditingSchedule =>
                     {
-                        BusForAdd.ScheduleStationBus.Add(modelForEditingSchedule.StationBusScheduleModel.GetStationBusSchedule());
+                        BusForAdd.StationBusSchedule.Add(modelForEditingSchedule.StationBusScheduleModel.GetStationBusSchedule());
                     });
                     timesForDeparture.ToList().ForEach(dateTimeModel =>
                     {

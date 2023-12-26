@@ -18,10 +18,11 @@ namespace BusStationWPF.Model
         public UserModel() { }
         public UserModel(User user)
         {
-            this.Id = user.Id;
-            this.Login = user.Login;
-            this.TypeUser = user.TypeOfUserId == 1 ? TypeUser.SimpleUser : TypeUser.Admin;
-            this.Password = user.Password;
+            this.Id = 1;
+            this.Login = "Admin";
+            this.TypeUser = TypeUser.Admin;
+            //this.TypeUser = user.TypeOfUserId == 1 ? TypeUser.SimpleUser : TypeUser.Admin;
+            this.Password = "12345";
         }
         public User GetUser()
         {

@@ -18,7 +18,7 @@ namespace DAL.Interfaces
         IRepositoryStation Station { get; }
         IRepositoryTimesForStation TimesForStation { get; }
         IRepositoryRoute Route { get; }
-        IRepositoryScheduleStationBus ScheduleStationBus { get; }
+        IRepositoryStationBusSchedule StationBusSchedule { get; }
         IRepositoryTickets Ticket { get; }
         int Save();
 

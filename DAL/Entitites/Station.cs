@@ -12,7 +12,7 @@ namespace DAL.Entitites
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Station()
         {
-            ScheduleStationBus = new HashSet<StationBusSchedule>();
+            StationBusSchedule = new HashSet<StationBusSchedule>();
         }
 
         public int Id { get; set; }
@@ -21,6 +21,6 @@ namespace DAL.Entitites
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StationBusSchedule> ScheduleStationBus { get; set; }
+        public virtual ICollection<StationBusSchedule> StationBusSchedule { get; set; }
     }
 }

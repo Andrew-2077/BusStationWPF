@@ -31,9 +31,9 @@
                         <GridViewColumn Header="Name"  DisplayMemberBinding="{Binding Path=Passenger.Name}"/>
                         <GridViewColumn Header="Откуда" DisplayMemberBinding="{Binding Path=Way.EndStationModel.Name}"/>
                         <GridViewColumn Header="Куда" DisplayMemberBinding="{Binding Path=Way.StartStationModel.Name}"/>
-                        <GridViewColumn Header="Время прибытия поезда на станцию отправки" DisplayMemberBinding="{Binding Path=Way.StartTimesForStationModel.ArrivalTime}"/>
-                        <GridViewColumn Header="Время отправления поезда на станции отправления" DisplayMemberBinding="{Binding Path=Way.StartTimesForStationModel.DepartureTime}"/>
-                        <GridViewColumn Header="Время прибытия поезда на станцию прибытия" DisplayMemberBinding="{Binding Path=Way.EndTimesForStationModel.ArrivalTime}"/>
+                        <GridViewColumn Header="Время прибытия автобуса на станцию отправки" DisplayMemberBinding="{Binding Path=Way.StartTimesForStationModel.ArrivalTime}"/>
+                        <GridViewColumn Header="Время отправления автобуса на станции отправления" DisplayMemberBinding="{Binding Path=Way.StartTimesForStationModel.DepartureTime}"/>
+                        <GridViewColumn Header="Время прибытия автобуса на станцию прибытия" DisplayMemberBinding="{Binding Path=Way.EndTimesForStationModel.ArrivalTime}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

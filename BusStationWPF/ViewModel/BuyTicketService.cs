@@ -49,7 +49,7 @@ namespace BusStationWPF.ViewModel
                 TimesForStation startTime = db.TimesForStation.GetItem(i.IdTimesForStationSource);
                 TimesForStation endTime = db.TimesForStation.GetItem(i.IdTimesForStationDestiny);
                 StationBusSchedule StartScheduleModel = (
-                from stationBusSchedule in db.ScheduleStationBus.GetList()
+                from stationBusSchedule in db.StationBusSchedule.GetList()
                 where stationBusSchedule.Number_flight ==
                 (from timesForStation in db.TimesForStation.GetList()
                  where timesForStation.RouteId == startTime.RouteId
@@ -57,7 +57,7 @@ namespace BusStationWPF.ViewModel
                  select timesForStation).Count() + 1
                 select stationBusSchedule).First();
                 StationBusSchedule EndScheduleModel = (
-                from stationBusSchedule in db.ScheduleStationBus.GetList()
+                from stationBusSchedule in db.StationBusSchedule.GetList()
                 where stationBusSchedule.Number_flight ==
                 (from timesForStation in db.TimesForStation.GetList()
                  where timesForStation.RouteId == endTime.RouteId

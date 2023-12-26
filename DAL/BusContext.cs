@@ -16,7 +16,7 @@ namespace DAL.Entitites
         public virtual DbSet<Level> Level { get; set; }
         public virtual DbSet<Passenger> Passenger { get; set; }
         public virtual DbSet<Route> Route { get; set; }
-        public virtual DbSet<StationBusSchedule> ScheduleStationBus { get; set; }
+        public virtual DbSet<StationBusSchedule> StationBusSchedule { get; set; }
         public virtual DbSet<Seat> Seat { get; set; }
         public virtual DbSet<Station> Station { get; set; }
         public virtual DbSet<Ticket> Ticket { get; set; }
@@ -40,7 +40,7 @@ namespace DAL.Entitites
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Bus>()
-                .HasMany(e => e.ScheduleStationBus)
+                .HasMany(e => e.StationBusSchedule)
                 .WithRequired(e => e.Bus)
                 .HasForeignKey(e => e.IdBus)
                 .WillCascadeOnDelete(false);
@@ -63,7 +63,7 @@ namespace DAL.Entitites
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Station>()
-                .HasMany(e => e.ScheduleStationBus)
+                .HasMany(e => e.StationBusSchedule)
                 .WithRequired(e => e.Station)
                 .HasForeignKey(e => e.IdStation)
                 .WillCascadeOnDelete(false);

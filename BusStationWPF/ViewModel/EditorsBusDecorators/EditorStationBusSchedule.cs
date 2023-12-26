@@ -141,7 +141,7 @@ namespace BusStationWPF.ViewModel.EditorsBusDecorators
                 busForEdit.Route.Add(addedRoute);
                 schedules.ToList().ForEach(i =>
                 {
-                    busForEdit.ScheduleStationBus.Add(i.StationBusScheduleModel.GetStationBusSchedule());
+                    busForEdit.StationBusSchedule.Add(i.StationBusScheduleModel.GetStationBusSchedule());
                     addedRoute.TimesForStation.Add(new TimesForStation()
                     {
                         ArrivalTime = i.ArrivalTime,

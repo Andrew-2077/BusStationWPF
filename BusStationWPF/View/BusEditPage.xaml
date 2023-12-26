@@ -20,9 +20,9 @@
         <localModel:LevelModelCollection x:Key="CollectionForLevels"/>
         <localModelcol:TimesForStationModelCollection x:Key="CollectionForAddingDateTimeDepartureInBus"/>
         <localModelcol:StationCollection x:Key="CollectionForStationinComboBox"/>
-        <localModelcol:ScheduleStationBusCollection x:Key="CollectionForAddingStationInBus"/>
+        <localModelcol:StationBusScheduleCollection x:Key="CollectionForAddingStationInBus"/>
     </Page.Resources>
-    <!--<Grid>
+    <Grid>
         <materialDesign:Card>
             <TabControl
     HorizontalContentAlignment="Center"
@@ -90,7 +90,7 @@
                             <ColumnDefinition Width="147*"/>
                             <ColumnDefinition Width="653*"/>
                         </Grid.ColumnDefinitions>
-                        <ScrollViewer>
+                        <!--<ScrollViewer>
                             <StackPanel IsEnabled="{Binding Source={x:Static localModelEditing:InfoButtonsOnBusEditPage}, Path=IsEnable}">
                                 <ItemsControl ItemTemplate="{StaticResource ResourceKey=TemplateForStructureLevels}"
                ItemsSource="{Binding Source={StaticResource CollectionForLevels}, Path=LevelCollection}">
@@ -106,7 +106,7 @@
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                                 </Button>
                             </StackPanel>
-                        </ScrollViewer>
+                        </ScrollViewer>-->
                         <ItemsControl Grid.Column="1" x:Name="rad" ItemTemplate="{StaticResource AlternativeAddressTemplate}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -136,10 +136,9 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <ScrollViewer Grid.Column="0" >
+                        <!--<ScrollViewer Grid.Column="0" >
 
-                            <StackPanel IsEnabled="{Binding Source={x:Static localModelEditing:InfoButtonsOnBusEditPage},
-                            Path=IsEnable}">
+                            <StackPanel IsEnabled="{Binding Source={x:Static localModelEditing:InfoButtonsOnBusEditPage},Path=IsEnable}">
                                 <StackPanel.Resources>
                                     <DataTemplate x:Key="TemplateForStationSchedule">
                                         <StackPanel>
@@ -275,7 +274,7 @@
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                                 </Button>
                             </StackPanel>
-                        </ScrollViewer>
+                        </ScrollViewer>-->
                         <ScrollViewer Grid.Column="1">
                             <StackPanel >
                                 <StackPanel.Resources>
@@ -347,7 +346,7 @@
                                     </ItemsControl.ItemsPanel>
                                 </ItemsControl>
                                 <Button
-            Command="{Binding Path=EditorBus.AddStartTripDateTime}"
+            Command="{Binding Path=DataContext.EditorBus.AddStartTripDateTime}"
     Content="Добавить время отправления автобуса"
     Style="{StaticResource MaterialDesignRaisedLightButton}">
                                 </Button>
@@ -357,7 +356,7 @@
                 </TabItem>
                 <TabItem IsEnabled="True">
                     <TabItem.Header>
-                        <Button Command="{Binding Path=EditorBus.AddBus}" Cursor="Hand">
+                        <Button Command="{Binding Path=DataContext.EditorBus.AddBus}" Cursor="Hand">
                             <StackPanel
           Width="auto"
           Height="auto">
@@ -378,5 +377,5 @@
         </materialDesign:Card>
 
 
-    </Grid>-->
+    </Grid>
 </Page>

@@ -75,7 +75,7 @@ namespace BusStationWPF.ViewModel.StrategiesSearchWay
         }
         protected void CheckPathesForStationAndAddFinded(NodeForSearchWay nodeForSearchWay)
         {
-            var WaysFromCurrentStation = (from StationBusSchedule in db.ScheduleStationBus.GetList()
+            var WaysFromCurrentStation = (from StationBusSchedule in db.StationBusSchedule.GetList()
                                           where !nodeForSearchWay.CurrentStationAndPathNode.CurrentPath.Any(i => i.ToStationSchedule.IdBus == StationBusSchedule.IdBus)
                                           group StationBusSchedule by StationBusSchedule.IdBus into AllWaysForCurrentStation
                                           where AllWaysForCurrentStation.FirstOrDefault(i => i.IdStation == nodeForSearchWay.CurrentStationAndPathNode.CurrentStation.Id) != null

@@ -108,7 +108,7 @@
     Visibility="{Binding Path =MainMenuControllerService.VisibleButtons.VisibleCreateBus}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners"
-                    Content="Создать поезд"
+                    Content="Создать автобус"
                     Command="{Binding Path=EditorBusService.StartProcess}">
                 </Button>
                 <Button

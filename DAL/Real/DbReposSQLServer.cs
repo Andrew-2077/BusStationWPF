@@ -22,7 +22,7 @@ namespace DAL.Real
         private StationRepository station;
         private TimesForStationRepository timesForStation;
         private RouteRepository route;
-        private ScheduleStationBusRepository scheduleStationBus;
+        private StationBusScheduleRepository stationBusSchedule;
         private TicketRepository ticket;
         public DbReposSQLServer(BusContext db)
         {
@@ -69,9 +69,9 @@ namespace DAL.Real
         {
             get => route ?? (route = new RouteRepository(db));
         }
-        public IRepositoryScheduleStationBus ScheduleStationBus
+        public IRepositoryStationBusSchedule StationBusSchedule
         {
-            get => scheduleStationBus ?? (scheduleStationBus = new ScheduleStationBusRepository(db));
+            get => stationBusSchedule ?? (stationBusSchedule = new StationBusScheduleRepository(db));
         }
         public IRepositoryTickets Ticket
         {

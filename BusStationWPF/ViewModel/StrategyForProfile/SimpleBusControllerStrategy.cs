@@ -31,7 +31,7 @@ namespace BusStationWPF.ViewModel.StrategyForProfile
             select new BusInProfileModel
             {
                 BusModel = new BusModel() { Id = bus.Id, IdUserCreator = (int)bus.IdUserCreator, LoadedInDB = true },
-                Stations = (from stationbusschedule in db.ScheduleStationBus.GetList()
+                Stations = (from stationbusschedule in db.StationBusSchedule.GetList()
                             where bus.Id == stationbusschedule.IdBus
                             join station in db.Station.GetList()
                             on stationbusschedule.IdStation equals station.Id

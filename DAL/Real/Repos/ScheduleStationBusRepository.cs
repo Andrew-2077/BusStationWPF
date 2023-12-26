@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 
 namespace DAL.Real.Repos
 {
-    public class ScheduleStationBusRepository : IRepositoryScheduleStationBus
+    public class StationBusScheduleRepository : IRepositoryStationBusSchedule
     {
         private BusContext db;
-        public ScheduleStationBusRepository(BusContext db)
+        public StationBusScheduleRepository(BusContext db)
         {
             this.db = db;
         }
         public List<StationBusSchedule> GetList()
         {
-            return db.ScheduleStationBus.ToList();
+            return db.StationBusSchedule.ToList();
         }
         public StationBusSchedule GetItem(int id)
         {
-            return db.ScheduleStationBus.FirstOrDefault(i => i.Id == id);
+            return db.StationBusSchedule.FirstOrDefault(i => i.Id == id);
         }
         public void Create(StationBusSchedule item)
         {
-            db.ScheduleStationBus.Add(item);
+            db.StationBusSchedule.Add(item);
         }
         public void Update(StationBusSchedule item)
         {
@@ -36,7 +36,7 @@ namespace DAL.Real.Repos
         {
             StationBusSchedule stationBusSchedule = GetItem(id);
             if (stationBusSchedule != null)
-                db.ScheduleStationBus.Remove(stationBusSchedule);
+                db.StationBusSchedule.Remove(stationBusSchedule);
         }
     }
 }

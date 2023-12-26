@@ -160,7 +160,7 @@
                                     <Expander 
       HorizontalAlignment="Stretch">
                                         <Expander.Header>
-                                            <TextBlock Text="Поезда" />
+                                            <TextBlock Text="Автобусы" />
                                         </Expander.Header>
 
                                         <StackPanel

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusStationWPF.Model.Collections
 {
-    public class ScheduleStationBusCollection : INotifyPropertyChanged
+    public class StationBusScheduleCollection : INotifyPropertyChanged
     {
         ObservableCollection<ModelForEditingSchedule> stationSchedule = new ObservableCollection<ModelForEditingSchedule>();
         public ObservableCollection<ModelForEditingSchedule> StationSchedule
